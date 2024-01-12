@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.icon-round {
+    @apply cursor-pointer flex items-center justify-center rounded-full w-6 h-6 hover:bg-base-200
+}
+
+.drag-drop {
+    @apply border-4 border-dashed 
+}
+
+.dragleave {
+    @apply border-base-100
+}
+
+.dargover {
+    @apply border-base-300
+}
