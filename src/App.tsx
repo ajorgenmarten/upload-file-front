@@ -91,6 +91,7 @@ function Files() {
         className={`p-5 grid grid-cols-[repeat(auto-fill,minmax(190px,1fr))] grid-rows-[repeat(auto-fill,42px)] gap-2 drag-drop min-h-[calc(100vh-64px)] ${
           isOver ? "dargover" : "dragleave"
         }`}
+        onDragOverCapture={(e) => e.preventDefault()}
         onDragEnterCapture={toggleOver}
         onDragLeaveCapture={toggleOver}
         onDropCapture={drop}
