@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 
 const BACKURL = import.meta.env.VITE_BACKURL
+const NAME = import.meta.env.VITE_NAME
 
 function App() {
   return (
     <Container>
       <Navbar />
+      <Info />
       <Files />
     </Container>
   );
@@ -17,11 +19,16 @@ function Navbar() {
       <div className="flex-1">
         <a className="btn btn-ghost text-xl uppercase peer">
           <i className="bi bi-cloud-fill text-blue-300"></i>
-          nube thaba
+          {NAME}
         </a>
       </div>
     </div>
   );
+}
+function Info() {
+  return <div className="flex gap-2 p-2 bg-blue-200 text-blue-600">
+    <i className="bi bi-info icon-round outline-1 outline-blue-500 outline hover:bg-inherit"></i> Arrastre un archivo para subirlo
+  </div>
 }
 function Files() {
   const [files, setFiles] = useState([]);
